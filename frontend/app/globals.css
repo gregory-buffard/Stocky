@@ -2,32 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.body {
+    scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar {
+    width: 1vh;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar-track {
+    background: transparent;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-mode-transition {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.light-switch-handle {
+    width: 0.3vh;
+    height: 3vh;
+    border-radius: 9999px;
+    background-color: rgb(87 83 78);
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.25));
+}
+
+.digital {
+    font-family: 'Digital', Fallback, sans-serif;
+}
+
+h1 {
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2vh;
+    font-weight: normal;
+}
+
+h6 {
+    font-size: 1.25vh;
+    font-weight: 300;
+
+}
+
+p, input {
+    font-size: 1.6vh;
+    font-weight: 500;
+    outline: none;
+}
+
+.time-scale-button {
+    padding: 1% 2%;
+    border-radius: 1vh;
+}
+
+@font-face {
+    font-family: 'Digital';
+    src: url('../public/typography/digital.ttf') format('truetype');
 }

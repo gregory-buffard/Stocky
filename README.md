@@ -1,2 +1,8 @@
 # Stocky
- Your favorite stocks app.
+Your task involves developing a user-friendly software application that effectively retrieves, stores, and displays current and historical stock price data. The software should interface with a chosen database to persistently store stock price histories. Additionally, it should allow users to select specific stocks they wish to monitor closely.
+
+Key features to include in the software:
+
+API Integration: Utilize APIs (e.g., financial data providers like Alpha Vantage, Yahoo Finance, etc.) to retrieve real-time and historical stock price data. Database Implementation: Employ a robust database system (MySQL, PostgreSQL, MongoDB, etc.) to efficiently store and manage the collected stock price data. User Interaction: Develop an intuitive user interface allowing users to input and track their chosen stocks. Implement functionalities to add, remove, or modify the list of monitored stocks. Watching Algorithm: Create an algorithm that continuously monitors selected stocks and alerts users when a stock's price drops below a predefined threshold (e.g., 10% of its original price). Notifications can be through in-app alerts, email, or any preferred communication method. Data Visualization: Implement graphical representations (graphs, charts) to illustrate the stock price trends over time for the selected stocks. Reliability and Efficiency: Ensure the application's reliability in fetching and updating stock data promptly. Optimize database queries and API requests to enhance performance. Security Measures: Implement necessary security measures to protect sensitive user data, especially when storing API keys or personal information.
+
+Remember, the aim is to showcase your proficiency in API integration, database management, algorithmic logic, user interface design, and system reliability.
