@@ -12,10 +12,13 @@ import {UserRequest} from "./types";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+};
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use('/api/stocks', stockRoutes);
 
 const URI = process.env.MONGODB_URI || '';
